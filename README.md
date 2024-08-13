@@ -10,13 +10,13 @@
 
 ## Throughput Test
 
-Server runtime: the server uses Tokio to run asynchronously, and handles IO reading and writing of tun devices/netstack at the same time.
+Server runtime: the server uses Tokio to run asynchronously, and handles IO reading and writing of tun device/netstack at the same time.
 
 Client runtime: the client works in a single IO mode (either reading or writing), and runs synchronously in a rust standard single thread.
 
 Test IO mode: the client's reader mode corresponds to the server's writting, and the client's writer mode corresponds to the server's reading.
 
-Benchmark test: the client reads or writes data on TCP stream to the tun device, and the server uses tun2 to read and hand it over a netstack.
+Benchmark test: the client reads or writes data on a TCP stream to the tun device, and the server uses tun2 to read and hand it over a netstack.
 
 - [macOS](./benchmarks/throughput/macos.md)
 - [Linux](./benchmarks/throughput/linux.md)
