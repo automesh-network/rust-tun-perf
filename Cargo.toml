@@ -1,0 +1,13 @@
+[package]
+name = "rust-tun-perf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+futures = "0.3.30"
+clap = { version = "4.5.13", features = ["derive"] }
+tokio = { version = "1", features = ["net", "macros", "io-util"] }
+tun = { package = "tun2", git = "https://github.com/tun2proxy/rust-tun.git", branch = "v2", features = [ "async"] }
+netstack-lwip = { package = "lwip", git = "https://github.com/ssrlive/lwip.git", branch = "rust" }
+netstack-ipstack = { package = "ipstack", git = "https://github.com/narrowlink/ipstack.git", branch = "main" }
+netstack-smoltcp = { package = "netstack-smoltcp", git = "https://github.com/automesh-network/netstack-smoltcp.git", branch = "main" }
